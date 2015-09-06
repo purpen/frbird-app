@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BuyWayCell" id="IY5-7m-wZO">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IY5-7m-wZO" id="Dja-G0-9XE">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cko-Wt-z1e">
+                        <rect key="frame" x="15" y="15" width="58" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="Qcw-9s-tLs"/>
+                            <constraint firstAttribute="height" constant="15" id="yY8-Bx-4gs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKy-b0-m79">
+                        <rect key="frame" x="15" y="87" width="58" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Ji7-8R-Zcn"/>
+                            <constraint firstAttribute="width" constant="58" id="msJ-j2-BrL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY2-v6-FLp">
+                        <rect key="frame" x="15" y="40" width="130" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="Kee-96-bVZ"/>
+                            <constraint firstAttribute="width" constant="130" id="nZo-FT-nXq"/>
+                        </constraints>
+                        <state key="normal" title="免费配送">
+                            <color key="titleColor" red="1" green="0.2901960784" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-l9-FtW">
+                        <rect key="frame" x="15" y="112" width="130" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="AxQ-vP-ry0"/>
+                            <constraint firstAttribute="height" constant="32" id="RBs-bI-Q3h"/>
+                        </constraints>
+                        <state key="normal" title="在线支付">
+                            <color key="titleColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CY2-v6-FLp" firstAttribute="top" secondItem="cko-Wt-z1e" secondAttribute="bottom" constant="10" id="N9r-cd-SSR"/>
+                    <constraint firstItem="CY2-v6-FLp" firstAttribute="leading" secondItem="vN2-l9-FtW" secondAttribute="leading" id="PyF-or-jyp"/>
+                    <constraint firstItem="cko-Wt-z1e" firstAttribute="leading" secondItem="Dja-G0-9XE" secondAttribute="leading" constant="15" id="RRZ-6x-nVd"/>
+                    <constraint firstItem="CY2-v6-FLp" firstAttribute="leading" secondItem="cko-Wt-z1e" secondAttribute="leading" id="dVg-b7-488"/>
+                    <constraint firstItem="CY2-v6-FLp" firstAttribute="leading" secondItem="RKy-b0-m79" secondAttribute="leading" id="mGS-nq-cLW"/>
+                    <constraint firstItem="vN2-l9-FtW" firstAttribute="top" secondItem="RKy-b0-m79" secondAttribute="bottom" constant="10" id="qNC-BX-Ldl"/>
+                    <constraint firstItem="RKy-b0-m79" firstAttribute="top" secondItem="CY2-v6-FLp" secondAttribute="bottom" constant="15" id="yaw-WE-1Ax"/>
+                    <constraint firstItem="cko-Wt-z1e" firstAttribute="top" secondItem="Dja-G0-9XE" secondAttribute="top" constant="15" id="ydI-nU-Asv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="231" y="186.5"/>
+        </tableViewCell>
+    </objects>
+</document>

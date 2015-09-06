@@ -1,0 +1,48 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+//功能
+#import "JYComFunction.h"
+//Log管理
+#import "JYComLogManager.h"
+//Api
+#import "JYComApis.h"
+//第三方
+#import "THNShare.h"
+//配置
+#import "JYComConfigure.h"
+//通知键值
+#import "JYComNotify.h"
+//全局颜色
+#import "UIColor+ColorCache.h"
+//数据解析
+#import "NSDictionary+ModelParse.h"
+//图片缩放和剪切
+#import "UIImage+JYComTelescopic.h"
+//UIView划线
+#import "UIView+CreateSepret.h"
+
+#import "ShareEngineDefine.h"
+
+#import "UIViewController+AMThumblrHud.h"
+#endif
+
+
+/*
+ tips:分享功能
+      第三屏社区界面
+      我的收藏界面
+ 
+ */

@@ -1,0 +1,56 @@
+//
+//  UIViewController+AMThumblrHud.m
+//  store
+//
+//  Created by XiaobinJia on 14-12-24.
+//  Copyright (c) 2014年 TaiHuoNiao. All rights reserved.
+//
+
+#import "UIViewController+AMThumblrHud.h"
+#import "AMTumblrHud.h"
+#import "JDStatusBarNotification.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+
+@implementation UIViewController (AMThumblrHud)
+#pragma mark - Loading
+- (void)showLoadingWithAni:(BOOL)ani
+{
+    AMTumblrHud *tumblrHUD = [[AMTumblrHud alloc] initWithFrame:CGRectMake((CGFloat) ((self.view.frame.size.width - 55) * 0.5),
+                                                                           (CGFloat) ((self.view.frame.size.height - 20) * 0.5 - 30), 55, 20)];
+    tumblrHUD.hudColor = [UIColor SecondColor];
+    tumblrHUD.tag = 783233;
+    self.view.userInteractionEnabled = NO;
+    [self.view addSubview:tumblrHUD];
+    
+    [tumblrHUD showAnimated:ani];
+}
+
+- (void)hideLoading
+{
+    self.view.userInteractionEnabled = YES;
+    AMTumblrHud *tumblrHUD = (AMTumblrHud *)[self.view viewWithTag:783233];
+    [tumblrHUD hide];
+    [tumblrHUD removeFromSuperview];
+}
+
+- (void)hideLoadingWithCompletionMessage:(NSString *)info
+{
+    self.view.userInteractionEnabled = YES;
+    AMTumblrHud *tumblrHUD = (AMTumblrHud *)[self.view viewWithTag:783233];
+    [tumblrHUD hide];
+    [tumblrHUD removeFromSuperview];
+    [JDStatusBarNotification showWithStatus:info
+                               dismissAfter:2.0
+                                  styleName:JDStatusBarStyleMatrix];
+}
+#pragma mark - Loading2
+
+#pragma mark - alert
+- (void)jdAlertWithInfo:(NSString *)info
+{
+    [JDStatusBarNotification showWithStatus:info
+                               dismissAfter:4.0
+                                  styleName:JDStatusBarStyleMatrix];
+}
+
+@end

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="THNMainCellIdentifier" id="LKM-AV-FLO">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="309"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LKM-AV-FLO" id="8Ng-RX-v1q">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="12001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9w-Np-sRR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="202.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="202" id="qHy-A0-QOt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="12003" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全球首创美妆移动电源，化妆充电两不误！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Zl-zNI">
+                        <rect key="frame" x="14" y="238" width="292" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="MlP-KQ-rjZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="12002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="魔镜-全球首创美妆移动电源" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-um-QPi">
+                        <rect key="frame" x="14" y="212" width="292" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="jJB-tU-adO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="12004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥299.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxp-nT-2iN">
+                        <rect key="frame" x="14" y="280" width="292" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Xby-7w-ILb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="1" green="0.20392156862745098" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="jxp-nT-2iN" firstAttribute="top" secondItem="Jeu-Zl-zNI" secondAttribute="bottom" constant="7" id="C1L-Kn-Uqz"/>
+                    <constraint firstItem="Jeu-Zl-zNI" firstAttribute="leading" secondItem="8Ng-RX-v1q" secondAttribute="leading" constant="14" id="Ldv-rG-WCa"/>
+                    <constraint firstAttribute="trailing" secondItem="jxp-nT-2iN" secondAttribute="trailing" constant="14" id="Oa1-lh-uFl"/>
+                    <constraint firstItem="UhW-um-QPi" firstAttribute="top" secondItem="K9w-Np-sRR" secondAttribute="bottom" constant="9" id="SpF-24-MwC"/>
+                    <constraint firstItem="UhW-um-QPi" firstAttribute="leading" secondItem="8Ng-RX-v1q" secondAttribute="leading" constant="14" id="Txw-XY-QkW"/>
+                    <constraint firstItem="K9w-Np-sRR" firstAttribute="top" secondItem="8Ng-RX-v1q" secondAttribute="top" id="d9y-J9-iSd"/>
+                    <constraint firstItem="jxp-nT-2iN" firstAttribute="leading" secondItem="8Ng-RX-v1q" secondAttribute="leading" constant="14" id="dRV-cw-6mX"/>
+                    <constraint firstItem="Jeu-Zl-zNI" firstAttribute="top" secondItem="UhW-um-QPi" secondAttribute="bottom" constant="7" id="dzf-Lr-nXl"/>
+                    <constraint firstAttribute="trailing" secondItem="Jeu-Zl-zNI" secondAttribute="trailing" constant="14" id="f2L-yC-vhc"/>
+                    <constraint firstItem="K9w-Np-sRR" firstAttribute="leading" secondItem="8Ng-RX-v1q" secondAttribute="leading" id="gDT-Ku-QHc"/>
+                    <constraint firstAttribute="trailing" secondItem="K9w-Np-sRR" secondAttribute="trailing" id="ufT-AA-Pib"/>
+                    <constraint firstAttribute="trailing" secondItem="UhW-um-QPi" secondAttribute="trailing" constant="14" id="xRJ-j8-aSo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="439" y="200.5"/>
+        </tableViewCell>
+    </objects>
+</document>

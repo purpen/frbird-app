@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="THNLoginViewController">
+            <connections>
+                <outlet property="_account" destination="sMa-10-VUA" id="ig9-LG-aaG"/>
+                <outlet property="_bigButton" destination="sM4-YX-ZvN" id="NSj-yB-Fk4"/>
+                <outlet property="_secret" destination="cCU-ZM-fY3" id="jSZ-ri-lph"/>
+                <outlet property="view" destination="QD2-EE-l37" id="lUt-cn-MvC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QD2-EE-l37">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMa-10-VUA" customClass="JYComCustomTextField">
+                    <rect key="frame" x="15" y="22" width="290" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TEa-V4-3ZD"/>
+                    </constraints>
+                    <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCU-ZM-fY3" customClass="JYComCustomTextField">
+                    <rect key="frame" x="15" y="81" width="290" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fBc-5H-KxJ"/>
+                    </constraints>
+                    <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM4-YX-ZvN">
+                    <rect key="frame" x="15" y="140" width="290" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="yZ9-8b-Lis"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J2-nZ-00A">
+                    <rect key="frame" x="15" y="196" width="290" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="pEf-0Q-y54"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="忘记密码?">
+                        <color key="titleColor" red="0.50980392156862742" green="0.48627450980392156" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetButtonClicked" destination="-1" eventType="touchUpInside" id="28k-Rk-HvE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cCU-ZM-fY3" firstAttribute="leading" secondItem="sMa-10-VUA" secondAttribute="leading" id="3Tg-Xj-kGe"/>
+                <constraint firstItem="sMa-10-VUA" firstAttribute="leading" secondItem="QD2-EE-l37" secondAttribute="leading" constant="15" id="4eq-av-gRK"/>
+                <constraint firstItem="cCU-ZM-fY3" firstAttribute="top" secondItem="sMa-10-VUA" secondAttribute="bottom" constant="15" id="AEG-oD-oPL"/>
+                <constraint firstItem="cCU-ZM-fY3" firstAttribute="trailing" secondItem="sMa-10-VUA" secondAttribute="trailing" id="Rnf-4Z-fK9"/>
+                <constraint firstItem="sMa-10-VUA" firstAttribute="top" secondItem="QD2-EE-l37" secondAttribute="top" constant="22" id="TBV-k2-e5r"/>
+                <constraint firstAttribute="trailing" secondItem="9J2-nZ-00A" secondAttribute="trailing" constant="15" id="V1R-lB-89B"/>
+                <constraint firstItem="sM4-YX-ZvN" firstAttribute="leading" secondItem="sMa-10-VUA" secondAttribute="leading" id="X8f-ih-sn6"/>
+                <constraint firstItem="sM4-YX-ZvN" firstAttribute="trailing" secondItem="sMa-10-VUA" secondAttribute="trailing" id="d7e-iN-064"/>
+                <constraint firstItem="9J2-nZ-00A" firstAttribute="leading" secondItem="QD2-EE-l37" secondAttribute="leading" constant="15" id="i6D-iY-KXz"/>
+                <constraint firstAttribute="trailing" secondItem="sMa-10-VUA" secondAttribute="trailing" constant="15" id="oFB-Bx-ZkU"/>
+                <constraint firstItem="9J2-nZ-00A" firstAttribute="top" secondItem="sM4-YX-ZvN" secondAttribute="bottom" constant="12" id="pNa-PP-hop"/>
+                <constraint firstItem="sM4-YX-ZvN" firstAttribute="top" secondItem="cCU-ZM-fY3" secondAttribute="bottom" constant="15" id="rMt-RR-H48"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="244" y="258"/>
+        </view>
+    </objects>
+</document>
