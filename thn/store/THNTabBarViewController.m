@@ -10,7 +10,7 @@
 //首页5个Tab
 #import "THNMineViewController.h"
 #import "THNMainViewController.h"
-#import "THNStoreViewController.h"
+#import "THNStore2ViewController.h"
 #import "THNPartyViewController.h"
 #import "THNBaseNavController.h"
 #import "THNCreativeViewController.h"
@@ -64,7 +64,7 @@
     THNMainViewController *c1 = [[THNMainViewController alloc] init];
     THNBaseNavController *nav1 = [[THNBaseNavController alloc] initWithRootViewController:c1];
     
-    THNStoreViewController *c2 = [[THNStoreViewController alloc] init];
+    THNStore2ViewController *c2 = [[THNStore2ViewController alloc] init];
     THNBaseNavController *nav2 = [[THNBaseNavController alloc] initWithRootViewController:c2];
     
     THNPartyViewController *c3 = [[THNPartyViewController alloc] init];

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *  Version1.0(2.0弃用)
+ */
 @interface THNStoreViewController : UITableViewController
 @end

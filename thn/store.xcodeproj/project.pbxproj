@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1200C7651A2C052F00F7F06B /* THNTopicCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1200C7641A2C052F00F7F06B /* THNTopicCategory.m */; };
+		120110211BA32C6D00803852 /* THNMainCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120110201BA32C6D00803852 /* THNMainCell2.xib */; };
+		120110251BA33A0900803852 /* THNStore2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120110231BA33A0900803852 /* THNStore2ViewController.m */; };
+		120110261BA33A0900803852 /* THNStore2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 120110241BA33A0900803852 /* THNStore2ViewController.xib */; };
 		12098BD31A0C74B000C91400 /* UIColor+ColorCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 12098BD21A0C74B000C91400 /* UIColor+ColorCache.m */; };
 		12098BDA1A0C7E4200C91400 /* THNUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12098BD91A0C7E4200C91400 /* THNUserManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		12098BE01A0C839D00C91400 /* THNBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12098BDF1A0C839D00C91400 /* THNBaseNavController.m */; };
@@ -41,10 +44,13 @@
 		123557291A0C69F400F075B0 /* UIImage+JYComTelescopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 123557241A0C69F400F075B0 /* UIImage+JYComTelescopic.m */; };
 		1235572B1A0C69F400F075B0 /* UIView+CreateSepret.m in Sources */ = {isa = PBXBuildFile; fileRef = 123557281A0C69F400F075B0 /* UIView+CreateSepret.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		125A67671A5A858D00005702 /* taihuoniao_area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 125A67661A5A858D00005702 /* taihuoniao_area.plist */; };
+		1261D1431BAB023B008C4B4E /* THNCateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1261D1411BAB023B008C4B4E /* THNCateDetailViewController.m */; };
+		1261D1441BAB023B008C4B4E /* THNCateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1261D1421BAB023B008C4B4E /* THNCateDetailViewController.xib */; };
 		126473401A5BC3C70096A017 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B727EF1A287BA5003E8104 /* SystemConfiguration.framework */; };
 		126473421A5BC3CF0096A017 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126473411A5BC3CF0096A017 /* Security.framework */; };
 		126C18451A2EC8F800858A5A /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 126C18441A2EC8F800858A5A /* HMSegmentedControl.m */; };
 		126CD6E31A35BE92005615E2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 126CD6E21A35BE92005615E2 /* libc++.dylib */; };
+		1270038C1BA40C1F003CA4E0 /* StoreCateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1270038B1BA40C1F003CA4E0 /* StoreCateCell.xib */; };
 		127301581A3E7CE500441C4C /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 127301551A3E7CE500441C4C /* NJKWebViewProgress.m */; };
 		127301591A3E7CE500441C4C /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 127301571A3E7CE500441C4C /* NJKWebViewProgressView.m */; };
 		127301681A3EF09900441C4C /* THNYuShouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127301661A3EF09900441C4C /* THNYuShouViewController.m */; };
@@ -186,6 +192,10 @@
 		021572C4781ED814035FA732 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1200C7631A2C052F00F7F06B /* THNTopicCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNTopicCategory.h; sourceTree = "<group>"; };
 		1200C7641A2C052F00F7F06B /* THNTopicCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNTopicCategory.m; sourceTree = "<group>"; };
+		120110201BA32C6D00803852 /* THNMainCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNMainCell2.xib; sourceTree = "<group>"; };
+		120110221BA33A0900803852 /* THNStore2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNStore2ViewController.h; sourceTree = "<group>"; };
+		120110231BA33A0900803852 /* THNStore2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNStore2ViewController.m; sourceTree = "<group>"; };
+		120110241BA33A0900803852 /* THNStore2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNStore2ViewController.xib; sourceTree = "<group>"; };
 		12098BD11A0C74B000C91400 /* UIColor+ColorCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorCache.h"; sourceTree = "<group>"; };
 		12098BD21A0C74B000C91400 /* UIColor+ColorCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorCache.m"; sourceTree = "<group>"; };
 		12098BD81A0C7E4200C91400 /* THNUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNUserManager.h; sourceTree = "<group>"; };
@@ -258,6 +268,9 @@
 		123557271A0C69F400F075B0 /* UIView+CreateSepret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CreateSepret.h"; sourceTree = "<group>"; };
 		123557281A0C69F400F075B0 /* UIView+CreateSepret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CreateSepret.m"; sourceTree = "<group>"; };
 		125A67661A5A858D00005702 /* taihuoniao_area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = taihuoniao_area.plist; sourceTree = "<group>"; };
+		1261D1401BAB023B008C4B4E /* THNCateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNCateDetailViewController.h; sourceTree = "<group>"; };
+		1261D1411BAB023B008C4B4E /* THNCateDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNCateDetailViewController.m; sourceTree = "<group>"; };
+		1261D1421BAB023B008C4B4E /* THNCateDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNCateDetailViewController.xib; sourceTree = "<group>"; };
 		126473411A5BC3CF0096A017 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		126C18431A2EC8F800858A5A /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		126C18441A2EC8F800858A5A /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
@@ -265,6 +278,7 @@
 		126CD6DC1A35BB6A005615E2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		126CD6E01A35BDCC005615E2 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		126CD6E21A35BE92005615E2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		1270038B1BA40C1F003CA4E0 /* StoreCateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCateCell.xib; sourceTree = "<group>"; };
 		127301541A3E7CE500441C4C /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		127301551A3E7CE500441C4C /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		127301561A3E7CE500441C4C /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
@@ -1199,6 +1213,12 @@
 				12A8B9321A105C5C0098E8A9 /* THNStoreViewController.h */,
 				12A8B9331A105C5C0098E8A9 /* THNStoreViewController.m */,
 				12A8B9341A105C5C0098E8A9 /* THNStoreViewController.xib */,
+				120110221BA33A0900803852 /* THNStore2ViewController.h */,
+				120110231BA33A0900803852 /* THNStore2ViewController.m */,
+				120110241BA33A0900803852 /* THNStore2ViewController.xib */,
+				1261D1401BAB023B008C4B4E /* THNCateDetailViewController.h */,
+				1261D1411BAB023B008C4B4E /* THNCateDetailViewController.m */,
+				1261D1421BAB023B008C4B4E /* THNCateDetailViewController.xib */,
 				12A8B92D1A105C2F0098E8A9 /* THNMainViewController.h */,
 				12A8B92E1A105C2F0098E8A9 /* THNMainViewController.m */,
 				12A8B92F1A105C2F0098E8A9 /* THNMainViewController.xib */,
@@ -1356,12 +1376,14 @@
 			isa = PBXGroup;
 			children = (
 				12F4CB6E1A16457B00BF5D41 /* THNMainCell.xib */,
+				120110201BA32C6D00803852 /* THNMainCell2.xib */,
 				12F4CB721A16656F00BF5D41 /* THNSellingCell.xib */,
 				128194D51A18B96A00EB5389 /* THNCartCell.xib */,
 				12FECADA1A3543AF00EC31D2 /* THNTopicCell.xib */,
 				12E10B101A1DC7A900F5F9D0 /* AddressCell.xib */,
 				12F10A321A209D9800840C53 /* BuyWayCell.xib */,
 				12732EB51A4EC43F00BC1C12 /* THNOrderItem.xib */,
+				1270038B1BA40C1F003CA4E0 /* StoreCateCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1450,6 +1472,7 @@
 				128020E81A28C25E00186834 /* Mask.png in Resources */,
 				125A67671A5A858D00005702 /* taihuoniao_area.plist in Resources */,
 				123556D51A0C641C00F075B0 /* Images.xcassets in Resources */,
+				120110261BA33A0900803852 /* THNStore2ViewController.xib in Resources */,
 				12BC04231A17CA6600968CA6 /* THNMyOrderViewController.xib in Resources */,
 				127301691A3EF09900441C4C /* THNYuShouViewController.xib in Resources */,
 				12EB3ED11A3AC65A00AEFEEA /* THNTopicCommentViewController.xib in Resources */,
@@ -1466,11 +1489,14 @@
 				128194D61A18B96A00EB5389 /* THNCartCell.xib in Resources */,
 				12C9012C1A31620200AA5A92 /* alertView_loading@2x.png in Resources */,
 				121129C81A46F44D00AC2D33 /* THNPayViewController.xib in Resources */,
+				1261D1441BAB023B008C4B4E /* THNCateDetailViewController.xib in Resources */,
 				12C900B31A3153A100AA5A92 /* SinaWeibo.bundle in Resources */,
 				1275FFFA1A178BD30051984A /* THNHomeViewController.xib in Resources */,
+				1270038C1BA40C1F003CA4E0 /* StoreCateCell.xib in Resources */,
 				1275FFFC1A1792820051984A /* THNLoginViewController.xib in Resources */,
 				12D919021B4A790300E63953 /* Launch Screen.xib in Resources */,
 				12E10B161A1DDAD600F5F9D0 /* THNAddressAddViewController.xib in Resources */,
+				120110211BA32C6D00803852 /* THNMainCell2.xib in Resources */,
 				12CC0B001A2423D900B5E2D4 /* THNTopicsViewController.xib in Resources */,
 				12A8B9451A105D0B0098E8A9 /* THNMineViewController.xib in Resources */,
 				12C901291A31620200AA5A92 /* alertView_button_gray_pressed@2x.png in Resources */,
@@ -1548,6 +1574,7 @@
 				129B62C21B16258D0093411D /* JDStatusBarNotification.m in Sources */,
 				129B62C31B16258D0093411D /* JDStatusBarStyle.m in Sources */,
 				127301681A3EF09900441C4C /* THNYuShouViewController.m in Sources */,
+				1261D1431BAB023B008C4B4E /* THNCateDetailViewController.m in Sources */,
 				12BC041D1A17CA4900968CA6 /* THNMyStoreViewController.m in Sources */,
 				128EFA741A3AFB57005945D2 /* THNAboutViewController.m in Sources */,
 				12098BE61A0C980A00C91400 /* THNLoginViewController.m in Sources */,
@@ -1574,6 +1601,7 @@
 				12F10A301A2095CE00840C53 /* THNOrderViewController.m in Sources */,
 				12C900B51A3153A100AA5A92 /* SinaWeiboAuthorizeView.m in Sources */,
 				12098BF81A0CB23500C91400 /* NSDictionary+ModelParse.m in Sources */,
+				120110251BA33A0900803852 /* THNStore2ViewController.m in Sources */,
 				12E10B071A1DB5D500F5F9D0 /* JYSexPicker.m in Sources */,
 				12098BF21A0CABB600C91400 /* THNForgetViewController.m in Sources */,
 				12CC0B041A24289C00B5E2D4 /* THNAddTopicViewController.m in Sources */,

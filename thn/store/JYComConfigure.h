@@ -26,8 +26,12 @@
  *****************/
 #define kTHNAdBannerHeight 202.00001f
 
-#define kTHNMainTableCellHeightPre 376
-#define kTHNMainTableCellHeightSelling 309
+//Version 1.0
+//#define kTHNMainTableCellHeightPre 376
+//#define kTHNMainTableCellHeightSelling 309
+
+#define kTHNMainTableCellHeightPre 266
+#define kTHNMainTableCellHeightSelling 266
 
 #define THNUserHeadWidth        360
 #define THNUserHeadHeight       360

@@ -69,7 +69,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"太火鸟";
+    self.title = @"精选";
     
     _currentPage = 1;
     _totalPage = MAXFLOAT;
@@ -197,7 +197,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return _afterRequest?kTHNAdBannerHeight+10:0;
+    return _afterRequest?kTHNAdBannerHeight:0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
@@ -260,6 +260,23 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *cellIdentifier = @"THNMainCellIdentifier";
+    if (!_nibsRegistered) {
+        UINib *mainNib = [UINib nibWithNibName:@"THNMainCell2" bundle:nil];
+        [tableView registerNib:mainNib forCellReuseIdentifier:cellIdentifier];
+        _nibsRegistered = YES;
+    }
+    THNProductBrief *product = nil;
+    if (indexPath.row<[_contentData count]) {
+        product = [self.contentData objectAtIndex:indexPath.row];
+    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];;
+    [(UIImageView *)[cell viewWithTag:12001] sd_setImageWithURL:[NSURL URLWithString:product.productImage]];
+    return cell;
+}
+/*Version1.0
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *mainCellIdentifier = @"THNMainCellIdentifier";
     static NSString *sellingCellIdentifier = @"THNSellingCellIdentifier";
 
@@ -317,7 +334,7 @@
         ((UILabel *)[cell viewWithTag:12004]).text = [NSString stringWithFormat:@"￥%@",product.productSalePrice];
     }
     
-    /*公用配置部分*/
+    //公用配置部分
     //封面图-12001
     //[(UIImageView *)[cell viewWithTag:12001] sd_setImageWithURL:[NSURL URLWithString:@"http://frbird.qiniudn.com/product/141008/5434e42f867094fb188b4635-1-bi.jpg"]];
     [(UIImageView *)[cell viewWithTag:12001] sd_setImageWithURL:[NSURL URLWithString:product.productImage]];
@@ -335,6 +352,7 @@
     
     return cell;
 }
+*/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 {
     return 1;

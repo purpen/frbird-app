@@ -15,7 +15,7 @@
  *
  *****************/
 
-#define kAppDebug 0
+#define kAppDebug 1
 
 #if kAppDebug
 #define JYLog(fmt, ...)                             NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);

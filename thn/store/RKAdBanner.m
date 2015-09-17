@@ -43,7 +43,6 @@
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.scrollsToTop = NO;
         _scrollView.delegate = self;
-        _scrollView.backgroundColor = [UIColor clearColor];
         self.backgroundColor  = [UIColor clearColor];
         for (int i=0; i<pageCount; i++) {
             NSString *imgURL=[_imageArray objectAtIndex:i];

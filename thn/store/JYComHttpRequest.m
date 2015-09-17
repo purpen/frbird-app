@@ -213,15 +213,15 @@
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
-    JYLog(@"*****\n%@",request.url);
-    JYLog(@"*****%@",response);
+    JYLog(@"***接口URL**\n%@",request.url);
+    JYLog(@"***响应结果**\n%@",response);
     [self handleResponseData:response];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSError *error = [request error];
-    JYLog(@"%@",error);
+    JYLog(@"***错误信息**\n%@",error);
     [self failedWithError:error];
 }
 

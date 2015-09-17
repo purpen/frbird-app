@@ -10,6 +10,8 @@
 	<string>store</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>945589840E6CA6699FAD39F0527DEF324B0DE5AC</key>
+		<string>github.com:purpen/frbird-app.git</string>
 		<key>c939dbe9-6970-4601-9f6f-b64e6a8b08fa++505</key>
 		<string>http://code.taobao.org/svn/thn/trunk</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>store.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>945589840E6CA6699FAD39F0527DEF324B0DE5AC</key>
+		<string>../..</string>
 		<key>c939dbe9-6970-4601-9f6f-b64e6a8b08fa++505</key>
 		<string>..</string>
 	</dict>
@@ -33,6 +37,14 @@
 	<string>c939dbe9-6970-4601-9f6f-b64e6a8b08fa++505</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>945589840E6CA6699FAD39F0527DEF324B0DE5AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>

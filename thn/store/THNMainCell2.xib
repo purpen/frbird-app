@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="THNMainCellIdentifier" rowHeight="266" id="eht-6I-s9z">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eht-6I-s9z" id="34t-W9-ihI">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="12001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hX2-7S-zxc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="hX2-7S-zxc" firstAttribute="leading" secondItem="34t-W9-ihI" secondAttribute="leading" id="Apb-UL-XWT"/>
+                    <constraint firstAttribute="trailing" secondItem="hX2-7S-zxc" secondAttribute="trailing" id="KK9-fy-gqd"/>
+                    <constraint firstItem="hX2-7S-zxc" firstAttribute="top" secondItem="34t-W9-ihI" secondAttribute="top" id="MjD-vr-Csv"/>
+                    <constraint firstAttribute="bottom" secondItem="hX2-7S-zxc" secondAttribute="bottom" id="mUa-hd-3Ad"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="439" y="179"/>
+        </tableViewCell>
+    </objects>
+</document>
