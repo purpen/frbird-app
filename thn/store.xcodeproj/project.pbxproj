@@ -182,6 +182,7 @@
 		12F4CB6F1A16457B00BF5D41 /* THNMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F4CB6E1A16457B00BF5D41 /* THNMainCell.xib */; };
 		12F4CB731A16656F00BF5D41 /* THNSellingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F4CB721A16656F00BF5D41 /* THNSellingCell.xib */; };
 		12F7FB851A8B81C100227EA0 /* THNUserInfosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F7FB841A8B81C100227EA0 /* THNUserInfosTableViewController.m */; };
+		12FD98FD1BB04B4B004CB0A9 /* THNProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FD98FC1BB04B4B004CB0A9 /* THNProductCell.xib */; };
 		12FECADB1A3543AF00EC31D2 /* THNTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FECADA1A3543AF00EC31D2 /* THNTopicCell.xib */; };
 		12FECADF1A354D9400EC31D2 /* THNSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FECADD1A354D9400EC31D2 /* THNSetViewController.m */; };
 		12FECAE01A354D9400EC31D2 /* THNSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12FECADE1A354D9400EC31D2 /* THNSetViewController.xib */; };
@@ -578,6 +579,7 @@
 		12F4CB721A16656F00BF5D41 /* THNSellingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNSellingCell.xib; sourceTree = "<group>"; };
 		12F7FB831A8B81C100227EA0 /* THNUserInfosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNUserInfosTableViewController.h; sourceTree = "<group>"; };
 		12F7FB841A8B81C100227EA0 /* THNUserInfosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNUserInfosTableViewController.m; sourceTree = "<group>"; };
+		12FD98FC1BB04B4B004CB0A9 /* THNProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNProductCell.xib; sourceTree = "<group>"; };
 		12FECADA1A3543AF00EC31D2 /* THNTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THNTopicCell.xib; sourceTree = "<group>"; };
 		12FECADC1A354D9400EC31D2 /* THNSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNSetViewController.h; sourceTree = "<group>"; };
 		12FECADD1A354D9400EC31D2 /* THNSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNSetViewController.m; sourceTree = "<group>"; };
@@ -1384,6 +1386,7 @@
 				12F10A321A209D9800840C53 /* BuyWayCell.xib */,
 				12732EB51A4EC43F00BC1C12 /* THNOrderItem.xib */,
 				1270038B1BA40C1F003CA4E0 /* StoreCateCell.xib */,
+				12FD98FC1BB04B4B004CB0A9 /* THNProductCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1505,6 +1508,7 @@
 				12790FA31A4AA6BD0070E346 /* HZAreaPickerView.xib in Resources */,
 				12790FA61A4AA6C90070E346 /* city.plist in Resources */,
 				1275FFFE1A1792920051984A /* THNRegistViewController.xib in Resources */,
+				12FD98FD1BB04B4B004CB0A9 /* THNProductCell.xib in Resources */,
 				12CC0B051A24289C00B5E2D4 /* THNAddTopicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,9 @@
 
 typedef void (^AdRetBlock)(int);
 
-@interface RKAdBanner : UIView<UIScrollViewDelegate> {
-    
-	CGRect _viewSize;
+@interface RKAdBanner : UICollectionReusableView<UIScrollViewDelegate> {
 	UIScrollView *_scrollView;
 	NSArray *_imageArray;
-    NSArray *_titleArray;
     UIPageControl *_pageControl;
     int _currentPageIndex;
     UILabel *_noteTitle;
@@ -23,5 +20,6 @@ typedef void (^AdRetBlock)(int);
     NSTimer *_timer;
 }
 @property (nonatomic, copy) AdRetBlock retBlock;
+@property (nonatomic, retain) NSArray *imageArray;
 -(id)initWithFrameRect:(CGRect)rect ImageArray:(NSArray *)imgArr TitleArray:(NSArray *)titArr;
 @end

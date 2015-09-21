@@ -18,7 +18,6 @@
     [_noteTitle release], _noteTitle = nil;
     [_pageControl release],_pageControl = nil;
     [_imageArray release],_imageArray = nil;
-    [_titleArray release],_titleArray=nil;
     [super dealloc];
 }
 -(id)initWithFrameRect:(CGRect)rect ImageArray:(NSArray *)imgArr TitleArray:(NSArray *)titArr
@@ -26,72 +25,70 @@
     
 	if ((self=[super initWithFrame:rect])) {
         self.userInteractionEnabled=YES;
-        
-        _titleArray=[titArr retain];
-        NSMutableArray *tempArray=[NSMutableArray arrayWithArray:imgArr];
-        if ([imgArr count]) {
-            [tempArray insertObject:[imgArr objectAtIndex:([imgArr count]-1)] atIndex:0];
-            [tempArray addObject:[imgArr objectAtIndex:0]];
-        }
-		_imageArray=[[NSArray arrayWithArray:tempArray] retain];
-		_viewSize=rect;
-        NSUInteger pageCount=[_imageArray count];
-        _scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, _viewSize.size.width, _viewSize.size.height)];
-        _scrollView.pagingEnabled = YES;
-        _scrollView.contentSize = CGSizeMake(_viewSize.size.width * pageCount, _viewSize.size.height);
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.showsVerticalScrollIndicator = NO;
-        _scrollView.scrollsToTop = NO;
-        _scrollView.delegate = self;
-        self.backgroundColor  = [UIColor clearColor];
-        for (int i=0; i<pageCount; i++) {
-            NSString *imgURL=[_imageArray objectAtIndex:i];
-            UIButton *imgView=[[UIButton alloc] init];
-            if ([imgURL hasPrefix:@"http://"]) {
-                //网络图片 请使用ego异步图片库
-                [imgView sd_setImageWithURL:[NSURL URLWithString:imgURL] forState:UIControlStateNormal];
-            }
-            else
-            {
-                UIImage *img=[UIImage imageNamed:[_imageArray objectAtIndex:i]];
-                [imgView setImage:img forState:UIControlStateNormal];
-            }
-            
-            [imgView setFrame:CGRectMake(_viewSize.size.width*i, 0,_viewSize.size.width, _viewSize.size.height)];
-            imgView.tag=i;
-            [imgView addTarget:self action:@selector(imagePressed:) forControlEvents:UIControlEventTouchUpInside];
-            [_scrollView addSubview:imgView];
-            [imgView release];
-        }
-        [_scrollView setContentOffset:CGPointMake(_viewSize.size.width, 0)];
-        [self addSubview:_scrollView];
-
-        //说明文字层
-        UIView *noteView=[[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-33,self.bounds.size.width,33)];
-        [noteView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.8 alpha:.0]];
-        
-        float pageControlWidth = (pageCount - 2) * 10.0f + 40.f;
-        float pagecontrolHeight = 8.0f;
-        _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake((self.frame.size.width-pageControlWidth)/2, 17, pageControlWidth, pagecontrolHeight)];
-        _pageControl.backgroundColor = [UIColor clearColor];
-        _pageControl.currentPage=0;
-        _pageControl.numberOfPages=(pageCount-2);
-        _pageControl.pageIndicatorTintColor = [UIColor colorWithRed:204/255.0 green:204/255.0  blue:204/255.0  alpha:.45];
-        _pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:6/255.0 green:6/255.0 blue:6/255.0 alpha:1.0];
-        [noteView addSubview:_pageControl];
-        /*
-        _noteTitle=[[UILabel alloc] initWithFrame:CGRectMake(5, 6, self.frame.size.width-pageControlWidth-15, 20)];
-        [_noteTitle setText:[_titleArray objectAtIndex:0]];
-        [_noteTitle setBackgroundColor:[UIColor clearColor]];
-        [_noteTitle setFont:[UIFont systemFontOfSize:13]];
-        [noteView addSubview:_noteTitle];
-        */
-        [self addSubview:noteView];
-        [noteView release];
-        
-        [self adStart];
+        self.imageArray = imgArr;
 	}
 	return self;
+}
+- (void)setImageArray:(NSArray *)imageArray
+{
+    if (_imageArray != imageArray) {
+        [_imageArray release],_imageArray = nil;
+        _imageArray = [imageArray retain];
+    }
+    NSMutableArray *tempArray=[NSMutableArray arrayWithArray:imageArray];
+    if ([imageArray count]) {
+        [tempArray insertObject:[imageArray objectAtIndex:([imageArray count]-1)] atIndex:0];
+        [tempArray addObject:[imageArray objectAtIndex:0]];
+    }
+    _imageArray=[[NSArray arrayWithArray:tempArray] retain];
+    NSUInteger pageCount=[_imageArray count];
+    _scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kTHNAdBannerHeight)];
+    _scrollView.pagingEnabled = YES;
+    _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * pageCount, kTHNAdBannerHeight);
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.scrollsToTop = NO;
+    _scrollView.delegate = self;
+    self.backgroundColor  = [UIColor clearColor];
+    for (int i=0; i<pageCount; i++) {
+        NSString *imgURL=[_imageArray objectAtIndex:i];
+        UIButton *imgView=[[UIButton alloc] init];
+        if ([imgURL hasPrefix:@"http://"]) {
+            //网络图片 请使用ego异步图片库
+            [imgView sd_setImageWithURL:[NSURL URLWithString:imgURL] forState:UIControlStateNormal];
+        }
+        else
+        {
+            UIImage *img=[UIImage imageNamed:[_imageArray objectAtIndex:i]];
+            [imgView setImage:img forState:UIControlStateNormal];
+        }
+        
+        [imgView setFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, kTHNAdBannerHeight)];
+        imgView.tag=i;
+        [imgView addTarget:self action:@selector(imagePressed:) forControlEvents:UIControlEventTouchUpInside];
+        [_scrollView addSubview:imgView];
+        [imgView release];
+    }
+    [_scrollView setContentOffset:CGPointMake(SCREEN_WIDTH, 0)];
+    [self addSubview:_scrollView];
+    
+    //说明文字层
+    UIView *noteView=[[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-33,self.bounds.size.width,33)];
+    [noteView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.8 alpha:.0]];
+    
+    float pageControlWidth = (pageCount - 2) * 10.0f + 40.f;
+    float pagecontrolHeight = 8.0f;
+    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake((self.frame.size.width-pageControlWidth)/2, 17, pageControlWidth, pagecontrolHeight)];
+    _pageControl.backgroundColor = [UIColor clearColor];
+    _pageControl.currentPage=0;
+    _pageControl.numberOfPages=(pageCount-2);
+    _pageControl.pageIndicatorTintColor = [UIColor colorWithRed:204/255.0 green:204/255.0  blue:204/255.0  alpha:.45];
+    _pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:6/255.0 green:6/255.0 blue:6/255.0 alpha:1.0];
+    [noteView addSubview:_pageControl];
+    [self addSubview:noteView];
+    [noteView release];
+    
+    [self adStart];
 }
 - (void)adStart
 {
@@ -105,18 +102,8 @@
     if (page == pageCount) {
         page = 0;
     }
-    /*
-    int titleIndex=page-1;
-    if (titleIndex==[_titleArray count]) {
-        titleIndex=0;
-    }
-    if (titleIndex<0) {
-        titleIndex = (int)[_titleArray count]-1;
-    }
-    [_noteTitle setText:[_titleArray objectAtIndex:titleIndex]];
-    */
     [UIView animateWithDuration:.5 animations:^{
-        [_scrollView setContentOffset:CGPointMake(_viewSize.size.width*_currentPageIndex, 0)];
+        [_scrollView setContentOffset:CGPointMake(SCREEN_WIDTH*_currentPageIndex, 0)];
     } completion:^(BOOL finished){
         [self resetBannerState];
     }];
@@ -136,16 +123,6 @@
     _currentPageIndex=page;
        
     _pageControl.currentPage=(page-1);
-    /*
-    int titleIndex=page-1;
-    if (titleIndex==[_titleArray count]) {
-        titleIndex=0;
-    }
-    if (titleIndex<0) {
-        titleIndex = (int)[_titleArray count]-1;
-    }
-    [_noteTitle setText:[_titleArray objectAtIndex:titleIndex]];
-     */
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -161,11 +138,11 @@
 {
     if (_currentPageIndex==0) {
         
-        [_scrollView setContentOffset:CGPointMake(([_imageArray count]-2) * _viewSize.size.width, 0)];
+        [_scrollView setContentOffset:CGPointMake(([_imageArray count]-2) * SCREEN_WIDTH, 0)];
     }
     if (_currentPageIndex==([_imageArray count]-1)) {
         
-        [_scrollView setContentOffset:CGPointMake(_viewSize.size.width, 0)];
+        [_scrollView setContentOffset:CGPointMake(SCREEN_WIDTH, 0)];
         
     }
 }

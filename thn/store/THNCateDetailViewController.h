@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THNCategory.h"
 
 @interface THNCateDetailViewController : UIViewController
 @property (nonatomic, retain) IBOutlet UICollectionView *collectionView;
+- (id)initWithCateModel:(THNCategory *)cate;
 @end

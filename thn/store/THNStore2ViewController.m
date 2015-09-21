@@ -13,6 +13,7 @@
 #import "THNCategory.h"
 #import "THNErrorPage.h"
 #import <UIImageView+WebCache.h>
+#import "THNCateDetailViewController.h"
 
 @interface THNStore2ViewController ()<JYComHttpRequestDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 @property (strong, nonatomic) NSMutableArray *cateData;
@@ -159,6 +160,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     THNCategory *cate = [_cateData objectAtIndex:indexPath.row];
-    
+    THNCateDetailViewController *detail = [[THNCateDetailViewController alloc] initWithCateModel:cate];
+    detail.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 @end
