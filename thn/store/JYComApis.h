@@ -14,11 +14,12 @@
  * 服务端Api接口
  *
  *****************/
-//#define kTHNApiBaseUrl              @"http://t.taihuoniao.com/app/api"
-//#define kTHNPageBaseUrl             @"http://t.taihuoniao.com/app/wap"
-
-#define kTHNPageBaseUrl           @"http://m.taihuoniao.com"
-#define kTHNApiBaseUrl            @"http://api.taihuoniao.com"
+//测试环境
+#define kTHNApiBaseUrl              @"http://t.taihuoniao.com/app/api"
+#define kTHNPageBaseUrl             @"http://t.taihuoniao.com/app/wap"
+//正式环境
+//#define kTHNPageBaseUrl           @"http://m.taihuoniao.com"
+//#define kTHNApiBaseUrl            @"http://api.taihuoniao.com"
 
 #define kTHNApiLogin                @"/auth/login"
 #define kTHNApiRegister             @"/auth/register"
@@ -49,6 +50,8 @@
 #define kTHNApiProductUnZan         @"/product/ajax_cancel_love"
 #define kTHNApiProductComment       @"/product/ajax_comment"//评论
 #define kTHNApiProductCommentsList  @"/product/comments"//评论列表
+#define kTHNApiProductRelation      @"/product/fetch_relation_product"
+
 
 //立即购买
 #define kTHNApiProductNowBuy        @"/shopping/now_buy"

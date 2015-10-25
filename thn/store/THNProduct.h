@@ -31,5 +31,6 @@
 @property (nonatomic, assign) BOOL userStore;
 /*当前用户是否点赞*/
 @property (nonatomic, assign) BOOL userZan;
-
+//tag标签
+@property (nonatomic, copy) NSString *productTags;
 @end

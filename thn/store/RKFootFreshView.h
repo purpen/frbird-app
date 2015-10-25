@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RKFootFreshView : UIView
+@interface RKFootFreshView : UICollectionReusableView
 @property(nonatomic, readwrite) BOOL showActivityIndicator;
 @property(nonatomic, readwrite, getter = isRefreshing) BOOL refreshing;
 @property(nonatomic, readwrite) BOOL enabled;   // in case that no more items to load

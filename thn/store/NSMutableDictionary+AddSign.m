@@ -14,7 +14,7 @@
 - (void)addSign
 {
     NSArray *keys = [self allKeys];
-    JYLog(@"%@",keys);
+    //JYLog(@"%@",keys);
     NSArray *sortedKeys = [keys sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2){
         int tmp=0;//比到第几位
         NSNumber *key1;
@@ -53,12 +53,12 @@
     }
     [paraStr appendString:[THNUserManager client_secret]];
     [paraStr appendString:[THNUserManager client_id]];
-    JYLog(@"%@",paraStr);
+    //JYLog(@"%@",paraStr);
     //两次MD5
     NSString *signStrTmp = [paraStr JYComMD5Hash32];
-    JYLog(@"%@",signStrTmp);
+    //JYLog(@"%@",signStrTmp);
     NSString *signStr = [signStrTmp JYComMD5Hash32];
-    JYLog(@"%@",signStr);
+    //JYLog(@"%@",signStr);
     [self setObject:signStr forKey:@"sign"];
 }
 @end

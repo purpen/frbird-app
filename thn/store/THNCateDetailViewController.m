@@ -84,11 +84,14 @@
     _totalPage = MAXFLOAT;
     _afterRequest = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
-    [self.collectionView setContentSize:CGSizeMake(self.view.frame.size.width, self.collectionView.frame.size.height + 1)];
     [self.collectionView registerClass:[RKAdBanner class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"RKAdBanner"];
+    [self.collectionView registerClass:[RKFootFreshView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"RKFootFreshView"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"THNProductCell" bundle:nil] forCellWithReuseIdentifier:@"THNProductCell"];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     self.collectionView.collectionViewLayout = layout;
+    
+    
     
     __weak typeof(self) weakSelf = self;
     [self.collectionView addPullToRefreshWithPullText:@"taihuoniao.com"
@@ -104,10 +107,7 @@
                                               [weakSelf.loadFooterView setEnabled:YES];
                                               [weakSelf requestForData];
                                           }];
-    
-    _loadFooterView = [[RKFootFreshView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.f)];
     self.loadingmore = NO;
-    
     [self.collectionView.pullToRefreshView autoRefresh];
 }
 
@@ -115,10 +115,7 @@
 {
     _afterRequest = NO;
     [self.adsData removeAllObjects];
-    [self.contentData removeAllObjects];
     self.adsData = [[NSMutableArray alloc] initWithCapacity:0];
-    self.contentData = [[NSMutableArray alloc] initWithCapacity:0];
-    
     _currentPage = 1;
     //开始请求轮播，轮播控件进入正在加载状态
     NSMutableDictionary *paras = [NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -210,11 +207,6 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"THNProductCell";
-    static BOOL nibsRegistered = NO;
-    if (!nibsRegistered) {
-        [collectionView registerNib:[UINib nibWithNibName:@"THNProductCell" bundle:nil] forCellWithReuseIdentifier:CellIdentifier];
-        nibsRegistered = YES;
-    }
     THNProductBrief *product = [_contentData objectAtIndex:indexPath.row];
     UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [((UIImageView *)[cell viewWithTag:21001]) sd_setImageWithURL:[NSURL URLWithString:product.productImage]];
@@ -240,42 +232,46 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
-    for (THNAdModel *model in _adsData) {
-        if (model.adImage) {
-            [arr addObject:model.adImage];
-        }
-    }
-    
-    RKAdBanner *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"RKAdBanner" forIndexPath:indexPath];
-    headerView.imageArray = arr;
-    headerView.retBlock = ^(int order){
-        JYLog(@"&&&&&&&&&**********%d",order);
-        THNAdModel *model =  [_adsData objectAtIndex:order];
-        if (model.adType == kTHNAdTypeProduct) {
-            THNProductBrief *product = model.product;
-            THNProductViewController *productViewController = [[THNProductViewController alloc] initWithProduct:product coverImage:nil];
-            productViewController.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:productViewController animated:YES];
-        }else if(model.adType == kTHNAdTypeWeb){
-            THNWebViewController *webViewController = [[THNWebViewController alloc] initWithUrl:model.adWebUrl];
-            webViewController.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:webViewController animated:YES];
-        }else if(model.adType == kTHNAdTypeYushou){
-            THNProductBrief *product = model.product;
-            THNYuShouViewController *productViewController = [[THNYuShouViewController alloc] initWithProduct:product coverImage:nil];
-            productViewController.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:productViewController animated:YES];
-        }else if(model.adType == kTHNAdTypeTopic){
-            THNTopic *topic = model.topic;
-            THNTopicDetailViewController *detail = [[THNTopicDetailViewController alloc] initWithTopic:topic];
-            detail.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:detail animated:YES];
-        }
-    };
     UICollectionReusableView *reusableview = nil;
     if (kind == UICollectionElementKindSectionHeader) {
-        reusableview = (UICollectionReusableView *)headerView;
+        NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
+        for (THNAdModel *model in _adsData) {
+            if (model.adImage) {
+                [arr addObject:model.adImage];
+            }
+        }
+        
+        RKAdBanner *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"RKAdBanner" forIndexPath:indexPath];
+        headerView.imageArray = arr;
+        headerView.retBlock = ^(int order){
+            JYLog(@"&&&&&&&&&**********%d",order);
+            THNAdModel *model =  [_adsData objectAtIndex:order];
+            if (model.adType == kTHNAdTypeProduct) {
+                THNProductBrief *product = model.product;
+                THNProductViewController *productViewController = [[THNProductViewController alloc] initWithProduct:product coverImage:nil];
+                productViewController.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:productViewController animated:YES];
+            }else if(model.adType == kTHNAdTypeWeb){
+                THNWebViewController *webViewController = [[THNWebViewController alloc] initWithUrl:model.adWebUrl];
+                webViewController.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:webViewController animated:YES];
+            }else if(model.adType == kTHNAdTypeYushou){
+                THNProductBrief *product = model.product;
+                THNYuShouViewController *productViewController = [[THNYuShouViewController alloc] initWithProduct:product coverImage:nil];
+                productViewController.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:productViewController animated:YES];
+            }else if(model.adType == kTHNAdTypeTopic){
+                THNTopic *topic = model.topic;
+                THNTopicDetailViewController *detail = [[THNTopicDetailViewController alloc] initWithTopic:topic];
+                detail.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:detail animated:YES];
+            }
+        };
+        reusableview = headerView;
+    }else if (kind == UICollectionElementKindSectionFooter){
+        RKFootFreshView *loadFooterView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"RKFootFreshView" forIndexPath:indexPath];
+        _loadFooterView = loadFooterView;
+        reusableview = loadFooterView;
     }
     
     return reusableview;
@@ -283,6 +279,10 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     return _afterRequest?CGSizeMake(SCREEN_WIDTH, kTHNAdBannerHeight):CGSizeZero;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    return CGSizeMake(SCREEN_WIDTH, 44.0f);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -344,6 +344,10 @@
         [self requestForContentOfPage:1];
     }else{
         _afterRequest = YES;
+        if (_currentPage == 1) {
+            [self.contentData removeAllObjects];
+            self.contentData = [[NSMutableArray alloc] initWithCapacity:0];
+        }
         // 解析数据
         if ([result isKindOfClass:[NSDictionary class]]) {
             _totalPage = [result intValueForKey:@"total_page"];

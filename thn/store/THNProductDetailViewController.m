@@ -586,9 +586,6 @@ typedef enum : NSUInteger {
             }
         }
     }else{
-//        [JDStatusBarNotification showWithStatus:@"评论成功！"
-//                                   dismissAfter:4.0
-//                                      styleName:JDStatusBarStyleMatrix];
         [self alertWithInfo:@"评论成功！"];
         [self requestForPage:1];
     }
